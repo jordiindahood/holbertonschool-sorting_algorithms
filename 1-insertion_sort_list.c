@@ -33,20 +33,3 @@ void insertion_sort_list(listint_t **list)
 		checkpoint = checkpoint->next;
 	}
 }
-/**
- * node_swap - swap two nodes
- * @a: int
- * @b: int
- */
-void node_swap(listint_t *a, listint_t *b)
-{
-	b->prev = a->prev;
-	a->next = b->next;
-	if (b->prev)
-		b->prev->next = b;
-	a->prev = b;
-	b->next = a;
-	if (a->next)
-		a->next->prev = a;
-	b = a->prev;
-}
